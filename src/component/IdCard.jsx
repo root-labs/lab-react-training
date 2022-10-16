@@ -5,7 +5,7 @@ const IdCard = (props) => {
   console.log(date)
   return (
     <>
-      <div className="p-4 mb-5 text-center bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+      {/* <div className="p-4 mb-5 text-center bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700"> */}
         <div className="flex p-4 leading-normal ml-5">
           <img
             className="w-[10rem] mr-5"
@@ -13,41 +13,41 @@ const IdCard = (props) => {
             alt=""
           />
           <div>
-            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            <p className="mb-3 flex self-start font-normal text-gray-700 dark:text-gray-400 ">
               <strong className="font-semibold text-gray-900 dark:text-white">
-                First Name:
+                First Name :- 
               </strong>
-              firstName = {props.firstName}
+              {props.firstName}
             </p>
-            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            <p className="mb-3 flex self-start font-normal text-gray-700 dark:text-gray-400">
               {" "}
               <strong className="font-semibold text-gray-900 dark:text-white">
                 {" "}
-                Last Name:
+                Last Name :-
               </strong>
-              lastName = {props.lastName}
+              {props.lastName}
             </p>
-            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            <p className="mb-3 flex self-start font-normal text-gray-700 dark:text-gray-400">
               <strong className="font-semibold text-gray-900 dark:text-white">
-                Gender:
+                Gender :-
               </strong>
-              gender = {props.gender}
+              {props.gender}
             </p>
-            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            <p className="mb-3 flex self-start font-normal text-gray-700 dark:text-gray-400">
               <strong className="font-semibold text-gray-900 dark:text-white">
-                Height:
+                Height :-
               </strong>
-              height = {props.height}
+              {props.height}
             </p>
-            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            <p className="mb-3 flex self-start font-normal text-gray-700 dark:text-gray-400">
               <strong className="font-semibold text-gray-900 dark:text-white">
-                Birth:
+                Birth :-
               </strong>
-              birth = {date}
+              {date}
             </p>
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </>
   );
 };
