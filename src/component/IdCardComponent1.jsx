@@ -2,7 +2,7 @@ import React from "react";
 import dataDb from "../data/berlin.json";
 import IdCard from "./IdCard";
 
-const IdCardComponent = ({
+const IdCardComponent1 = ({
   lastName,
   firstName,
   height,
@@ -26,4 +26,4 @@ const IdCardComponent = ({
   );
 };
 
-export default IdCardComponent;
+export default IdCardComponent1;
