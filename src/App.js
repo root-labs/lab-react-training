@@ -8,6 +8,8 @@ import CreditCard from './components/CreditCard';
 import Rating from './components/Rating';
 import DriverCard from './components/DriverCard';
 import LikeButtonFunc from './components/LikeButton';
+import ClickablePicture from './components/ClickablePicture';
+import Dice from './components/Dice';
 
 
 function App() {
@@ -79,6 +81,15 @@ function App() {
 		licensePlate: "CO42DE"
 	}}/>
   <LikeButtonFunc/>
+  <ClickablePicture
+
+  img="https://upload.wikimedia.org/wikipedia/commons/d/d0/Red-eyed_Tree_Frog_-_Litoria_chloris_edit1.jpg"
+
+  imgClicked="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Amietophrynus_rangeri_Raucous_toad_Probable_mature_female_IMG_3715.JPG/1200px-Amietophrynus_rangeri_Raucous_toad_Probable_mature_female_IMG_3715.JPG"
+
+/>
+<Dice/>
+
     </div>
   );
 }
