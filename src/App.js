@@ -6,7 +6,8 @@ import Greetings from "./component/Greetings";
 function App() {
   return (
     <>
-      <h1 className="font-bold text-xl">IdCard</h1>
+    <div className=" mx-10 my-10 flex-col App overflow-x-auto scrollbar-hide relative shadow-md sm:rounded-lg mt-2">
+    <h1 className="font-bold flex self-start text-xl">IdCard</h1>
       <div className="App overflow-x-auto scrollbar-hide relative shadow-md sm:rounded-lg mt-2">
         <IdCard
           picture="https://randomuser.me/api/portraits/men/44.jpg"
@@ -27,10 +28,10 @@ function App() {
           birth={format(new Date(), '1988-05-11')}
         />
       </div>
-      <h1 className="font-bold text-xl my-5">Greetings</h1>
+      <h1 className="font-bold my-10 flex self-start text-xl">Greetings</h1>
       <Greetings lang="de">Ludwig</Greetings>
       <Greetings  lang="fr">François</Greetings>
-      
+    </div>
     </>
   );
 }
