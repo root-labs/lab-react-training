@@ -28,12 +28,12 @@ function ClickablePicture(props) {
 
     {
       !showGlasses && (
-        <img onClick={showFormClick} src={img} style={{ width: 300 }} style={{ height: 300}}></img>
+        <img onClick={showFormClick} src={img} style={{ width: 300, height: 300 }} ></img>
       )
     }
     {
       showGlasses && (
-        <img onClick={hideFormClick} src={imgClicked} style={{ width: 300}} style={{ height: 300}}></img>
+        <img onClick={hideFormClick} src={imgClicked} style={{ width: 300, height: 300}} ></img>
       )
     }
     

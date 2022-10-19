@@ -18,7 +18,9 @@ console.log(children)
             return "★★★★☆"
         } else if (Math.round(children) === 5) {
             return "★★★★★"
-        } 
+        } else {
+            return "only 0-5"
+        }
     }
 
 
