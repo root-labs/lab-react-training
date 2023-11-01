@@ -1,6 +1,6 @@
 
 .App {
-  text-align: center;
+  margin: 5px;
 }
 
 .App-logo {
@@ -40,4 +40,44 @@
 
 .Container{
   display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1.5px solid black;
+  margin: 3px;
+  padding: 2px;
+  line-height: 6px;
+  gap: 3px;
+  margin-bottom: 10px;
+}
+.one{
+display: flex;
+align-self: center;
+justify-content: center;
+margin: 0;
+}
+.two{
+  text-align: start;
+  margin-top: -6px;
+  margin-bottom: -6px;
+}
+.big{
+  padding: 5px;
+  margin-top: 10px;
+  border: 1px solid black;
+
+}
+.flexdev{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  padding: 15px;
+}
+.flexit{
+  display: flex;
+gap: 10px;
+}
+.stars{
+  font-size: 40px;
 }
