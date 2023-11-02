@@ -1,0 +1,10 @@
+.card{
+    display: flex;
+    align-items: flex-start;
+    margin: 5px;
+    border: 1px solid black;
+}
+.details{
+    margin-left: 5px;
+    margin-top: 0;
+}
