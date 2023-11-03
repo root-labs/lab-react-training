@@ -15,14 +15,14 @@ function CreditCard(props) {
 
     
     const source = {
-        Visa: './../visa.png',
-        'Master Card': './../mastercard.png', 
+        'Visa': './assets/images/visa.png',
+        'Master Card': './assets/images/master-card.svg', 
     };
 
     return (
         <div className="flexdev"  style={{ width : 400 , backgroundColor: bgColor,color:color }} >
 
-            <img src={source[type]} alt={type} />
+            <img className='sizebaleImg' src={source[type]} alt={type} />
             <h1>{CreditCardNumber(number)}</h1>
             <div>
             Expires {expirationMonth}/{expirationYear          }

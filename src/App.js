@@ -8,7 +8,11 @@ import CreditCard from './components/CreditCard';
 import Rating from './components/Rating';
 import DriverCard from './components/DriverCard';
 import ClickablePicture from './components/ClickablePicture';
-
+import LikeButton from './components/LikeButton ';
+import Dice from './components/Dice';
+import Carousel from './components/Carousel';
+import NumbersTable from './components/NumbersTable';
+import RGBColorPicker from './components/RGBColorPicker';
 
 function App() {
   return (
@@ -114,10 +118,45 @@ function App() {
 		licensePlate: "BE33ER"
 	}}
 />
+
+
+
+<h1>Like Butoon </h1>
+<div className="ct">
+<LikeButton />
+<LikeButton />
+</div>
+
 <h1>ClickablePicture</h1>
 <ClickablePicture
-img='./assets/images/maxence.png' />
+img='"https://randomuser.me/api/portraits/men/40.jpg' />
+
+
+<h1>Dice</h1>
+<div  >
+<Dice  />
+</div>
+<h1>Carousel</h1>
+<Carousel
+  images={[
+    'https://randomuser.me/api/portraits/women/1.jpg',
+    'https://randomuser.me/api/portraits/men/1.jpg',
+    'https://randomuser.me/api/portraits/women/2.jpg',
+    'https://randomuser.me/api/portraits/men/2.jpg',
+  ]}
+/>
+
+
+
+
+<h1>NumbersTable</h1>
+<NumbersTable limit={12}/>
+
+
+<h1>RGBColorPicker </h1>
+<RGBColorPicker />
     </div>
+	
   );
 }
 

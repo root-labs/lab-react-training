@@ -81,3 +81,47 @@ gap: 10px;
 .stars{
   font-size: 40px;
 }
+.ct{
+  display: flex;
+  gap: 10px;
+}
+.sizebaleImg{
+  width: 63px;
+  height: 34px;
+
+}
+.smaller{
+  width: 100px;
+  height: 100px;
+}
+.red{
+  width: 80px;
+  height: 80px;
+  background-color: #EB3324;
+  list-style-type: none;
+  text-decoration: none;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border: 2px solid black;
+}
+
+.blue{
+  background-color: white;
+  width: 80px;
+  height: 80px;
+  list-style-type: none;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+
+}
+.flexitagain{
+  display: flex;
+  flex-wrap: wrap;
+  width:420px ;
+ 
+
+}

@@ -3,7 +3,6 @@ import './../App.css';
 
 function IdCard(props) {
   return (
-     
      <div className="Container">
      <div className="one">
 <img src={props.picture} alt={`${props.firstName} ${props.lastName}`} />
