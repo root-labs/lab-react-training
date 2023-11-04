@@ -4,8 +4,12 @@ import Greetings from "./components/Greetings";
 import Random from "./components/Random";
 import BoxColor from "./components/BoxColor";
 import CreditCard from "./components/CreditCard";
+import LikeButton from "./components/LikeButton";
+import ClickablePicture from "./components/ClickablePicture";
+import Dice from "./components/Dice"; 
 
 function App() {
+
   return (
     <div className="App">
       <IDcard
@@ -67,6 +71,16 @@ function App() {
         bgColor="#ddbb55"
         color="white"
       />
+
+      <LikeButton />
+      <LikeButton />
+
+      <ClickablePicture
+        img= {require('./assets/images/maxence.png')}
+        imgClicked={require("./assets/images/maxence-glasses.png")}
+      />
+      <Dice/>
+      
     </div>
   );
 }
