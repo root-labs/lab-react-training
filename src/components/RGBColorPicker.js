@@ -23,18 +23,39 @@ function RGBColorPicker() {
     };
   
     return (
-      <div>
+      <div  >
+          <div  style={{
+            backgroundColor: `rgb(${rValue},0,0})`,
+            width: '50px',
+            height: '50px',
+            margin: '20px 0',
+          }}>
         <SingleColorPicker color="r" value={rValue} onChange={handleColorChange} />
+        </div>
+        <div  style={{
+            backgroundColor: `rgb(0,${gValue},0)`,
+            width: '50px',
+            height: '50px',
+            margin: '20px 0',
+          }}>
         <SingleColorPicker color="g" value={gValue} onChange={handleColorChange} />
+        </div>
+        <div  style={{
+            backgroundColor: `rgb(0,0,${bValue})`,
+            width: '50px',
+            height: '50px',
+            margin: '20px 0',
+          }}>
         <SingleColorPicker color="b" value={bValue} onChange={handleColorChange} />
+        </div>
         <div
           style={{
             backgroundColor: `rgb(${rValue},${gValue},${bValue})`,
-            width: '100px',
-            height: '100px',
+            width: '50px',
+            height: '50px',
             margin: '20px 0',
           }}
-        ></div>
+        >rgb(${rValue},${gValue},${bValue})</div>
       </div>
     );
   }
