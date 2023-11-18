@@ -189,3 +189,110 @@
   display: flex;
   align-items: center;
 }
+
+/* Clicked Picture Style */
+.clickable-picture {
+  width: 200px;
+}
+
+.clickable-picture img {
+  width: 100%;
+}
+
+/* Dice Style */
+.dice {
+  width: 100px;
+}
+
+.dice img {
+  width: 100%;
+}
+
+/* Carousel Style */
+.carousel {
+  width: 400px;
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.carousel img {
+  width: 100%;
+}
+
+.carousel button {
+  background-color: wheat;
+  font-weight: bold;
+  width: 150px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.carousel button:disabled {
+  opacity: 0.5;
+  color: black;
+  cursor: not-allowed;
+  background-color: gray;
+}
+
+/* Numbers Table Style */
+.numbers-table {
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.numbers-table__item:nth-child(even) {
+  background-color: red;
+}
+
+.numbers-table__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  width: 79px;
+  height: 79px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  gap: 0.5rem;
+}
+
+/* RGB Color Picker Style */
+.rgb-color-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.color-piker-result,
+.single-color-picker div {
+  border: 2px solid black;
+  width: 70px;
+  height: 70px;
+}
+.single-color-picker {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.single-color-picker label,
+input {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.single-color-picker input {
+  width: 170px;
+  height: 50px;
+  outline: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.single-color-picker input:focus {
+  border: 2.5px solid #4888db;
+}

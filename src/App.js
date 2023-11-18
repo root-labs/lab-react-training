@@ -9,12 +9,22 @@ import CreditCard from "./components/creditCard/CreditCard";
 import Rating from "./components/rating/Rating";
 import DriverCard from "./components/driverCard/DriverCard";
 import LikeButton from "./components/likeButton/LikeButton";
+import ClickablePicture from "./components/clickablePicture/ClickablePicture";
+import Dice from "./components/dice/Dice";
+import Carousel from "./components/carousel/Carousel";
+import NumbersTable from "./components/numbersTable/NumbersTable.js";
+import RGBColorPicker from "./components/RGBColorPicker/RGBColorPicker";
 
 // Data
 import { idCardData } from "./data/idCardData";
 import { creditCardData } from "./data/creditCardData";
 import { ratingData } from "./data/ratingData";
 import { driverCardData } from "./data/driverCardData";
+import { carouselData } from "./data/carouselData";
+
+// IMG
+import img from "./assets/images/maxence.png";
+import imgClicked from "./assets/images/maxence-glasses.png";
 
 function App() {
   return (
@@ -68,6 +78,26 @@ function App() {
           <LikeButton />
           <LikeButton />
         </div>
+      </div>
+      <div className="clickable-picture-wrapper">
+        <h2>Clickable Picture</h2>
+        <ClickablePicture img={img} imgClicked={imgClicked} />
+      </div>
+      <div className="dice-wrapper">
+        <h2>Dice</h2>
+        <Dice />
+      </div>
+      <div className="carousel-wrapper">
+        <h2>Carousel</h2>
+        <Carousel images={carouselData} />
+      </div>
+      <div className="numbers-table-wrapper">
+        <h2>Numbers Table</h2>
+        <NumbersTable limit={12} />
+      </div>
+      <div className="rgb-color-picker-wrapper">
+        <h2>RGB Color Picker</h2>
+        <RGBColorPicker />
       </div>
     </div>
   );

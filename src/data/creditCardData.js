@@ -24,8 +24,8 @@ export const creditCardData = [
     expirationYear: 2024,
     bank: "BNP",
     owner: "Maxence Bouret",
-    bgColor: "#feb000",
-    color: "white",
+    bgColor: "#11AA99",
+    color: "#FFFFFF",
   },
   {
     type: "Master Card",
@@ -34,8 +34,8 @@ export const creditCardData = [
     expirationYear: 2027,
     bank: "Bank of America",
     owner: "Maxence Bouret",
-    bgColor: "#11aa99",
-    color: "black",
+    bgColor: "#EEEEEE",
+    color: "#222222",
   },
   {
     type: "Visa",
@@ -44,7 +44,7 @@ export const creditCardData = [
     expirationYear: 2026,
     bank: "Millennium",
     owner: "Maxence Bouret",
-    bgColor: "#553000",
-    color: "#ffffff",
+    bgColor: "#DDBB55",
+    color: "#FFFFFF",
   },
 ];
