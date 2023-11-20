@@ -2,7 +2,7 @@
 <img src="https://imgur.com/XOS1Vdh.png"  width="150px" height="150px">
 
 
-# LAB | Thinking in React
+# LAB | React Training
 
   
 
@@ -10,15 +10,11 @@
 
   
 
-By now you probably know that **in React everything is a component**. A React app is built out of components, usually a lot of them. When used, components are _usually_ nested inside of other components.
+The purpose of this exercise is to practice the core React concepts such as: creating components, passing data through props, working with state, rendering lists, and working with forms (controlled components).
 
   
 
-To refresh our memory, **a component is a reusable piece of code, which defines how certain features should look and behave in the UI**.
-
-  
-
-Now one more time, we will be _thinking and acting_ in that direction. Maybe in the past days we didn't see how important is to **plan** our apps prior to building them. In this exercise, we will emphasize this approach. We’ll walk you through the _thinking process_ of building an app displaying a searchable table of products.
+To see the expected result for each iteration, refer to the solution example: [**React Training - solution**](https://5c6c2a0de07b084ce35373ee--determined-aryabhata-a8a833.netlify.com/).
 
   
 
@@ -28,15 +24,13 @@ Now one more time, we will be _thinking and acting_ in that direction. Maybe in 
 
 - Fork this repo
 
-  
-
 - Clone this repo
 
   
 
-```bash
+```shell
 
-$ cd lab-thinking-in-react
+$ cd lab-react-training
 
 $ npm install
 
@@ -45,6 +39,8 @@ $ npm start
 ```
 
   
+
+<!-- You can find the starter code in the starter code folder of this GitHub repo. -->
 
   
 
@@ -71,147 +67,68 @@ git push origin master
 - Create a Pull Request so we can review your work.
 
   
-  
-  
-
-## Getting Started
-
-  
-
-Clean the `App.js` component so that it has the following structure:
-
-  
-
-```jsx
-
-// src/App.js
-
-import  "./App.css";
-
-  
-
-function App() {
-
-return  <div  className="App"></div>;
-
-}
-
-export  default App;
-
-```
-
-  
-  
-  
 
 ## Instructions
 
   
 
-### Iteration 0 | Introduction
+### Iteration 1 | Component: `IdCard`
 
   
 
-In the `src/` folder, you will find the `data.json` file containing the data representing products of a random store.
+Create and render an `IdCard` component with 6 props:
 
   
 
-Each product object has the following fields: `category`, `price`, `inStock` and `name`, of which `inStock` is type _boolean_ (this information will be valuable soon). Example:
+-  `lastName`: A string
+
+-  `firstName`: A string
+
+-  `gender`: A string, `'male'` or `'female'`
+
+-  `height`: A number
+
+-  `birth`: A date
+
+-  `picture`: A string
 
   
 
-```json
-
-{
-	"category": "Sporting Goods",
-	"price": "$49.99",
-	"inStock": true,
-	"name": "Football"
-}
-
-```
-
-  
-  
-  
-
-You will be dealing with multiple components that depend on each other. To properly reflect the changes in all the components, we'll store the state in the closest common parent component (remember _lift the state up_).
+**Example:**
 
   
 
-You will be dealing with multiple components that depend on each other. To ensure that components can interact with each other, we'll store the state in the closest common parent component (remember _lifting the state up_).
+```jsx
 
-  
-
-And remember, this is just an exercise and a part of the learning process. No one expects you to do it perfectly. Think it through, ask questions, be curious and explore all possibilities. Let's do this! :wink:
-
-  
-  
-  
-
-----
-
-  
-  
-  
-
-### Iteration 1 | Break The UI Into A Component Hierarchy
-
-  
-
-So remember: the proper planning will save you a lot of time when building the app. The first thing you’ll want to do is to make a sketch on the piece of paper: draw boxes around every component (and sub-component) and give each component a name.
-
-A possible approach could be something like this:
+<IdCard
+	lastName='Doe'
+	firstName='John'
+	gender='male'
+	height={178}
+	birth={new Date("1992-07-14")}
+	picture="https://randomuser.me/api/portraits/men/44.jpg"
+/>
 
  
+<IdCard
+	lastName='Delores '
+	firstName='Obrien'
+	gender='female'
+	height={172}
+	birth={new Date("1988-05-11")}
+	picture="https://randomuser.me/api/portraits/women/44.jpg"
+
+/>
+
+```
 
   
 
-<details>
-
-<summary>Click here to see the image</summary>
-
-  
-  
-
-<hr>
-
-  
-  
-
-![](https://imgur.com/awT32yw.png)
+**Expected Output:**
 
   
 
-</details>
-
-  
-
-As you can see here, we have four components in our app:
-
-  
-
--  **ProductsPage (orange):** contains the entirety of the example (we will render it in the `App.js`)
-
--  **SearchBar (blue):** having an input that takes the user's search string
-
--  **ProductTable (green):** displays all the products and also shows the filtered products based on the user's search
-
--  **ProductRow (red):** displays a row (_table data_) for each product
-
-  
-
-Now that we’ve identified the components in our app let’s arrange them into a hierarchy. Components that appear within another component should appear as children in the hierarchy:
-
-  
-
-- ProductsPage
-
-- SearchBar
-
-- ProductTable
-
-- ProductRow
+![image](https://user-images.githubusercontent.com/5306791/52976030-22b0d200-33c8-11e9-91fe-e3ce0fa14078.png)
 
   
   
@@ -223,45 +140,711 @@ Now that we’ve identified the components in our app let’s arrange them into 
   
   
 
-### Iteration 2 | Products Page
+### Iteration 2 | Component: `Greetings`
 
   
 
-First, let's create a `components/` folder and our first component `ProductsPage.js`. This component will be the _parent_ of the other components.
+Create a `Greetings` component with 2 props:
 
   
 
-We'll give you a starter hint to kick off the project: this component should have a state variable holding the array of products. It should then pass down the products to other components that need them. So to start, you should import the `data.json` file and create a state variable in the following way:
+-  `lang`: A string that can have values: `"de"`, `"en"`, `"es"` or `"fr"`
+
+-  `children`: A text
+
+  
+
+The component should display a greeting text in the chosen language.
+
+  
+
+**Example:**
 
   
 
 ```jsx
 
-// src/components/ProductsPage.js
+<Greetings  lang="de">Ludwig</Greetings>
+
+<Greetings  lang="fr">François</Greetings>
+
+```
 
   
 
-import { useState } from  'react';
-
-import jsonData from  './../../data.json';
+**Expected Output:**
 
   
 
-function ProductsPage () {
+![image](https://user-images.githubusercontent.com/5306791/52957158-57edfd80-3391-11e9-8726-93c1a3389016.png)
 
-const [products, setProducts] = useState(jsonData);
+  
+  
+  
 
-return(
+----
 
-<div>
+  
+  
+  
 
-<h1>Root Store</h1>
+### Iteration 3 | Component: `Random`
 
-</div>
+  
 
-)
+Create a `Random` component with 2 props:
 
-}
+  
+
+-  `min`: A number
+
+-  `max`: A number
+
+  
+
+The component should display a random integer in the range between the `min` and the `max` number.
+
+  
+
+**Example:**
+
+  
+
+```jsx
+
+<Random  min={1}  max={6}/>
+
+<Random  min={1}  max={100}/>
+
+```
+
+  
+
+**Expected Output:**
+
+  
+
+![image](https://user-images.githubusercontent.com/5306791/52957202-718f4500-3391-11e9-9b45-d1172067e877.png)
+
+  
+  
+  
+
+----
+
+  
+  
+  
+
+### Iteration 4 | Component: `BoxColor`
+
+  
+
+Create a `BoxColor` component that displays a rectangle with a background color based on props. For this, you will need to add inline styles ([documentation](https://reactjs.org/docs/dom-elements.html#style)).
+
+  
+
+The component should take 3 props:
+
+  
+
+-  `r`: A number between `0` and `255` representing the amount of red
+
+-  `g`: A number between `0` and `255` representing the amount of green
+
+-  `b`: A number between `0` and `255` representing the amount of blue
+
+  
+
+**Example:**
+
+  
+
+```jsx
+
+<BoxColor  r={255}  g={0}  b={0}  />
+
+<BoxColor  r={128}  g={255}  b={0}  />
+
+```
+
+  
+
+**Expected Output:**
+
+  
+
+![image](https://user-images.githubusercontent.com/5306791/52957816-ec0c9480-3392-11e9-9e00-67094fa2b431.png)
+
+  
+
+As a bonus, you can also display the hex values of the color (e.g., `#ff0000` for red).
+
+  
+  
+  
+
+----
+
+  
+  
+  
+
+### Iteration 5 | Component: `CreditCard`
+
+  
+
+Create a `CreditCard` component that displays a rectangle with the information coming from the props.
+
+  
+
+The component should take 8 props:
+
+  
+
+-  `type`: A string that can be `"Visa"` or `"Master Card"`
+
+-  `number`: A string that is the number of the credit card. For security reasons, you should only display the 4 last digits 😉
+
+-  `expirationMonth`: A number that represents the month, between 1 and 12
+
+-  `expirationYear`: A number that represents the year
+
+-  `bank`: A string that represents the name of the bank
+
+-  `owner`: A string that represents the name of the owner
+
+-  `bgColor`: A string for the background color of the card
+
+-  `color`: A string for the text color of the card
+
+  
+
+Take your time to make the component look as close to the *expected output* as possible. You'll probably want to use flexbox.
+
+  
+
+**Example:**
+
+  
+
+```jsx
+
+<CreditCard
+	type="Visa"
+	number="0123456789018845"
+	expirationMonth={3}
+	expirationYear={2021}
+	bank="BNP"
+	owner="Maxence Bouret"
+	bgColor="#11aa99"
+	color="white"
+/>
+
+<CreditCard
+	type="Master Card"
+	number="0123456789010995"
+	expirationMonth={3}
+	expirationYear={2021}
+	bank="N26"
+	owner="Maxence Bouret"
+	bgColor="#eeeeee"
+	color="#222222"
+/>
+
+<CreditCard
+	type="Visa"
+	number="0123456789016984"
+	expirationMonth={12}
+	expirationYear={2019}
+	bank="Name of the Bank"
+	owner="Firstname Lastname"
+	bgColor="#ddbb55"
+	color="white"
+/>
+
+```
+
+  
+
+**Expected Output:**
+
+  
+
+![image](https://user-images.githubusercontent.com/5306791/52975678-ac5fa000-33c6-11e9-8cbf-7d13a8a0f625.png)
+
+  
+  
+  
+
+----
+
+  
+  
+  
+
+### Iteration 6 | Component: `Rating`
+
+  
+
+Create a `Rating` component that displays 5 stars. Depending on the value received, some stars should be empty (☆), and some should be filled (★).
+
+  
+
+The component should take 1 prop:
+
+  
+
+-  `children`: A number between `0` and `5`. The value can be a floating-point number. If the number received is `3.9`, the component should display 4 stars.
+
+  
+
+**Example:**
+
+  
+
+```jsx
+
+<Rating>0</Rating>
+
+<Rating>1.49</Rating>
+
+<Rating>1.5</Rating>
+
+<Rating>3</Rating>
+
+<Rating>4</Rating>
+
+<Rating>5</Rating>
+
+```
+
+  
+
+**Expected Output:**
+
+  
+
+![image](https://user-images.githubusercontent.com/5306791/52972787-39512c00-33bc-11e9-93d8-428d835442fd.png)
+
+  
+  
+  
+
+----
+
+  
+  
+  
+
+### Iteration 7 | Component: `DriverCard`
+
+  
+
+Create a `DriverCard` component that displays a rectangle with content based on the received props.
+
+  
+
+The component should take 4 props:
+
+  
+
+-  `name`: A string
+
+-  `rating`: A number between `0` and `5`. The value can be a floating point number.
+
+-  `img`: A string
+
+-  `car`: An object with properties `model` and `licensePlate`.
+
+  
+
+**Example**
+
+  
+
+```jsx
+
+<DriverCard
+	name="Travis Kalanick"
+	rating={4.2}
+	img="https://si.wsj.net/public/resources/images/BN-TY647_37gql_OR_20170621052140.jpg?width=620&height=428"
+	car={{
+		model: "Toyota Corolla Altis",
+		licensePlate: "CO42DE"
+	}}
+
+/>
+
+  
+
+<DriverCard
+	name="Dara Khosrowshahi"
+	rating={4.9}
+	img="https://ubernewsroomapi.10upcdn.com/wp-content/uploads/2017/09/Dara_ELT_Newsroom_1000px.jpg"
+	car={{
+		model: "Audi A3",
+		licensePlate: "BE33ER"
+	}}
+/>
+
+```
+
+  
+
+**Expected Output:**
+
+  
+
+![image](https://user-images.githubusercontent.com/5306791/52972847-66054380-33bc-11e9-92e0-8e48d1ab0212.png)
+
+  
+  
+  
+
+----
+
+  
+  
+  
+
+### Iteration 8 | State: `LikeButton`
+
+  
+
+Create a `LikeButton` component that displays a button with the initial text `"0 Likes"`. With each click, the number of Likes should increase.
+
+  
+
+As a bonus, implement the background color change on each click. You can use the following array of colors: `['purple','blue','green','yellow','orange','red']`
+
+  
+
+**Example:**
+
+  
+
+```jsx
+
+<LikeButton  />
+
+```
+
+  
+
+**Expected Output:**
+
+  
+
+![](https://media.giphy.com/media/OQJkfIEkYTUdYkgNP7/giphy.gif)
+
+  
+  
+  
+
+----
+
+  
+  
+  
+
+### Iteration 9: State: `ClickablePicture`
+
+  
+
+Create a `ClickablePicture` component that displays a picture. On each click, the picture should toggle between the two images passed through the props.
+
+  
+
+**Example:**
+
+  
+
+```jsx
+
+<ClickablePicture
+
+img='./assets/images/maxence.png'
+
+imgClicked='./assets/images/maxence-glasses.png'
+
+/>
+
+```
+
+  
+
+**Expected Output:**
+
+  
+
+![](https://media.giphy.com/media/9FXwCr2LLLIlgNL2sL/giphy.gif)
+
+  
+
+PS: If you want to use your picture instead, you can create it using this picture: http://www.stickpng.com/assets/images/584999937b7d4d76317f5ffd.png 😎
+
+  
+  
+  
+
+----
+
+  
+  
+  
+
+### Iteration 10 | State: `Dice`
+
+  
+
+Create a `Dice` component that displays a picture with the random dice value (example: `'./assets/images/dice3.png'`).
+
+  
+
+Every time the user clicks on the component, it should:
+
+  
+
+- First, display an empty picture (`'./assets/images/dice-empty.png'`)
+
+- 1 second later, display a new random picture (example: `'./assets/images/dice6.png'`).
+
+  
+
+**Example:**
+
+  
+
+```jsx
+
+<Dice  />
+
+```
+
+  
+
+**Expected Output before the click:**
+
+  
+
+![image](https://user-images.githubusercontent.com/5306791/52976705-c13e3280-33ca-11e9-8684-f4dbff643b79.png)
+
+  
+
+**Expected Output immediately after the click:**
+
+  
+
+![image](https://user-images.githubusercontent.com/5306791/52976790-25f98d00-33cb-11e9-864e-ec14b4ec2a31.png)
+
+  
+
+**Expected Output 1 second after the click:**
+
+  
+
+![image](https://user-images.githubusercontent.com/5306791/52976752-f64a8500-33ca-11e9-98ee-b0b17f5e85b2.png)
+
+  
+  
+  
+
+----
+
+  
+  
+  
+
+### Iteration 11 | State: `Carousel`
+
+  
+
+Create a `Carousel` component that displays an image and two buttons (<kbd>Left</kbd> and <kbd>Right</kbd>), which change the picture on each click, respectively.
+
+  
+
+The component should take 1 prop:
+
+  
+
+-  `images`: An array of strings. Each string should be an image URL.
+
+  
+
+**Example:**
+
+  
+
+```jsx
+
+<Carousel
+
+images={[
+'https://randomuser.me/api/portraits/women/1.jpg',
+'https://randomuser.me/api/portraits/men/1.jpg',
+'https://randomuser.me/api/portraits/women/2.jpg',
+'https://randomuser.me/api/portraits/men/2.jpg'
+]}
+
+/>
+
+```
+
+  
+
+**Expected Output:**
+
+  
+
+![](https://media.giphy.com/media/1n7cAJu0MWerLnnohR/giphy.gif)
+
+  
+  
+  
+
+----
+
+  
+  
+  
+
+### Iteration 12 | List and Keys | `NumbersTable`
+
+  
+
+Create a `NumbersTable` component that displays a list of numbers between `1` and the `limit`. Even numbers must be colored in red.
+
+  
+
+The component should take 1 prop:
+
+  
+
+-  `limit`: A number.
+
+  
+
+**Example:**
+
+  
+
+```jsx
+
+<NumbersTable  limit={12}  />
+
+```
+
+  
+
+**Expected Output:**
+
+  
+
+![image](https://user-images.githubusercontent.com/5306791/53028410-13349600-3467-11e9-8199-407375e61ab0.png)
+
+  
+  
+  
+
+----
+
+  
+  
+
+  
+  
+  
+
+----
+
+  
+  
+  
+
+----
+
+  
+  
+  
+
+### Iteration 13 | Lifting State Up - `RGBColorPicker`
+
+  
+
+Create 2 components:
+
+  
+
+- The `RGBColorPicker` component, that displays a square with an rgb color coming from the state.
+
+The component should have the following state variables:
+
+  
+
+-  `rValue`: A number between `0` and `255`, representing the amount of red
+
+  
+
+-  `gValue`: A number between `0` and `255`, representing the amount of green
+
+  
+
+-  `bValue`: A number between `0` and `255`, representing the amount of blue
+
+  
+
+  
+
+- The `SingleColorPicker` component should have an input field of type `"number"`, and allow the user to select a number between `0` and `255`.
+
+  
+
+The component should take 3 props:
+
+  
+
+-  `color`: A string that is either `"r"`, `"g"` or `"b"`
+
+-  `value`: A number between `0` and `255`
+
+-  `onChange`: A method that is triggered when the input is changed
+
+  
+  
+  
+
+The `RGBColorPicker` should render 3 `SingleColorPicker` components and send the state values to them.
+
+  
+
+**Example:**
+
+  
+
+```jsx
+
+<SingleColorPicker
+	color="r"
+	value={rValue}
+	onChange={ () => { /* ... */ } }
+/>
+
+  
+
+<SingleColorPicker
+	color="g"
+	value={gValue}
+	onChange={ () => { /* ... */ } }
+/>
+
+  
+
+<SingleColorPicker
+	color="b"
+	value={bValue}
+	onChange={ () => { /* ... */ } }
+/>
 
 ```
 
@@ -269,176 +852,14 @@ return(
   
   
 
-Next, let's import and render the `ProductsPage` component in the `App.js`:
+**Expected Output**
 
   
 
-```jsx
-
-// App.js
-
-import  './App.css';
-
-import ProductsPage from  './components/ProductsPage';
-
-function App() {
-	return (
-		<div  className="App">
-			<ProductsPage  />
-		</div>
-	);
-}
-
-export  default App;
-
-```
+![image](https://user-images.githubusercontent.com/5306791/53166207-f918c600-35d4-11e9-8c47-c58cdc2d05b0.png)
 
   
   
   
 
-Okay, now it's your turn. Create the `<SearchBar />` and the `<ProductTable />` components to display the search bar and the list of products. You should render both components inside the `ProductsPage` (see the sketch above 😉).
-
-  
-  
-
-----
-
-  
-  
-
-### Iteration 3 | Product Row
-
-  
-
-Next, create a `<ProductRow />` component and use it to display each product in the list. This component should be rendered inside of the `ProductTable`.
-
-  
-
-The products that are out of stock should be colored in **red**. _Hint:_ Each product object has a property `inStock` which you can use to change the text color conditionally.
-
-  
-
-<details>
-
-<summary>Click here to see the image</summary>
-
-  
-  
-
-<hr>
-
-  
-  
-
-![](https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m3/lab-thinking-in-react/thinking-in-react-4.png)
-
-  
-
-</details>
-
-  
-
-<!-- ![image](https://user-images.githubusercontent.com/23629340/42808421-95a78a66-89b3-11e8-85c1-3246127a7f1a.png) -->
-
-  
-  
-  
-
-----
-
-  
-  
-  
-
-### Iteration 4 | Filter the Products
-
-  
-
-In this iteration, we'll add the list filtering functionality. Every time someone types a letter in the search input, the list should update based on the user's input.
-
-_Hint:_ Search functionality can be easily implemented using an `input` with the `onChange` handler, which will update the state on every keystroke.
-
-  
-
-<details>
-
-<summary>Click here to see the image</summary>
-
-  
-  
-  
-
-<hr>
-
-  
-  
-  
-
-![](https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/m3/lab-thinking-in-react/thinking-in-react-2.gif)
-
-  
-
-</details>
-
-  
-  
-  
-
-----
-
-  
-  
-  
-
-### Iteration 5 | The Checkbox Filter (Bonus)
-
-  
-
-As a part of the search box, add a check box that allows filtering through the products that are in stock.
-
-_Hint:_ To do this, you will need an `<input type="checkbox" />` with the `onChange` handler, which will update the state depending on the value of the `checked` property.
-
-We know that setting the search and checkbox will probably be the biggest challenge but don't be discouraged - you've got this! Take your time and try to work your way through by applying the knowledge you gained so far.
-
-  
-
-<details>
-
-<summary>Click here to see the image</summary>
-
-  
-  
-
-<hr>
-
-  
-  
-
-![](https://imgur.com/l8Io2H4.png)
-
-  
-
-</details>
-
-  
-  
-  
-
-----
-
-  
-  
-  
-
-### Iteration 6 | Styling your app (Bonus)
-
-  
-
-Feel free to style the app in any way you would like. :art:
-
-  
-  
-  
-
-Happy coding! :heart:
+**Happy coding!** :heart:

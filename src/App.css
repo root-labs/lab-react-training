@@ -1,95 +1,298 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 .App {
-  max-width: 1000px;
-  margin: 0 auto;
+  padding: 1rem;
 }
 
-.products-page {
-  padding: 20px;
-}
-
-.products-page h1 {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-/* Search bar */
-.search-bar {
-  margin-top: 2.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-  flex-direction: column;
-}
-.search-bar h2 {
-  margin-bottom: 3px;
-  font-weight: normal;
-}
-
-.search-input {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.checkbox {
-  margin-top: 30px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.checkbox input {
-  margin-right: 5px;
-}
-
-/* Products table */
-.products-table {
-  margin-top: 4rem;
-}
-.products-table table {
-  width: 100%;
+/* Id Card Style*/
+.container-id-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.products-table thead {
-  width: 100%;
-  background-color: #e7ecef;
-  padding: 10px;
+  gap: 1.5rem;
 }
 
-.products-table tbody {
-  width: 100%;
-}
-.products-table tr {
-  width: 100%;
+.id-card {
+  padding: 0.5rem;
+  height: 200px;
+  border: 1px solid black;
   display: flex;
-  height: 40px;
   gap: 1rem;
 }
 
-.products-table th,
-td {
+.id-card img {
+  width: 200px;
+  height: 100%;
+}
+
+.id-card p {
+  font-weight: 700;
+}
+
+.id-card span {
+  font-weight: 400;
+}
+
+/* Greeting and Random Style*/
+.greetings p,
+.random p {
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+
+/* Box Color Style*/
+.box-color {
   display: flex;
-  width: calc(100% / 2);
+  flex-direction: column;
+  gap: 1rem;
+}
+.box-color div {
+  height: 100px;
+  font-size: 1.5rem;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.products-table tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
+/* Credit Card Style*/
+.credit-card-wrapper {
+  margin: 3rem 0;
+}
+.credit-cards {
+  display: flex;
+  gap: 1.5rem;
 }
 
-.products-table tbody tr:hover {
-  background-color: #eaeaea;
+.credit-card {
+  padding: 1.5rem;
+  width: 350px;
+  border-radius: 0.5rem;
+}
+
+.credit-card-logo {
+  margin-left: calc(100% - 50px);
+  width: 60px;
+  height: 40px;
+}
+
+.credit-card-logo img {
+  width: 100%;
+}
+
+.credit-card-info p {
+  margin: 0;
+}
+
+.credit-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#credit-card-number {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.credit-card-bank {
+  margin-left: 1.5rem;
+}
+
+/* Rating Style*/
+.rating p {
+  font-size: 1.5rem;
+}
+
+/* Driver Card Style*/
+.driver-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.driver-card {
+  background-color: #425cbb;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0;
+  margin: 0;
+  border: 1px solid black;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+.driver-logo {
+  width: 110px;
+  height: 110px;
+}
+
+.driver-logo img {
+  display: flex;
+  align-items: left;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.driver-info p,
+.driver-info h3 {
+  margin: 0;
+}
+
+.driver-info h3 {
+  font-size: 1.8rem;
+}
+
+.driver-info p {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.driver-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 400px;
+}
+
+/* Like Button Style */
+.like-buttons {
+  display: flex;
+  gap: 1rem;
+}
+.like-button {
+  width: 150px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin: 0;
+  justify-content: center;
+  border-radius: 0.5rem;
+}
+.like-button button {
+  border: none;
+  background-color: transparent;
+  height: 100%;
+  cursor: pointer;
+  width: 90px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+/* Clicked Picture Style */
+.clickable-picture {
+  width: 200px;
+}
+
+.clickable-picture img {
+  width: 100%;
+}
+
+/* Dice Style */
+.dice {
+  width: 100px;
+}
+
+.dice img {
+  width: 100%;
+}
+
+/* Carousel Style */
+.carousel {
+  width: 400px;
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.carousel img {
+  width: 100%;
+}
+
+.carousel button {
+  background-color: wheat;
+  font-weight: bold;
+  width: 150px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.carousel button:disabled {
+  opacity: 0.5;
+  color: black;
+  cursor: not-allowed;
+  background-color: gray;
+}
+
+/* Numbers Table Style */
+.numbers-table {
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.numbers-table__item:nth-child(even) {
+  background-color: red;
+}
+
+.numbers-table__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  width: 79px;
+  height: 79px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  gap: 0.5rem;
+}
+
+/* RGB Color Picker Style */
+.rgb-color-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.color-piker-result,
+.single-color-picker div {
+  border: 2px solid black;
+  width: 70px;
+  height: 70px;
+}
+.single-color-picker {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.single-color-picker label,
+input {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.single-color-picker input {
+  width: 170px;
+  height: 50px;
+  outline: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.single-color-picker input:focus {
+  border: 2.5px solid #4888db;
 }
