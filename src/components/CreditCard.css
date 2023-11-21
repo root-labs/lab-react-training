@@ -1,11 +1,13 @@
 .credit{
     width:300px;
     border-radius: 10px;
-    padding:10px;
+    padding:18px;
     margin:5px;
     display: inline-block;
 }
+.credit > div{
+    text-align: right;
+}
 .credit img{
-    margin-right: 0;
-    width:50px;
+    width:60px;
 }
