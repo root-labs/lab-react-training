@@ -24,8 +24,8 @@ function App() {
 	lastName='Doe'
 	firstName='John'
 	gender='male'
-	height={178}
-	 //birth={new Date("1992-07-14")}
+	height='178cm' 
+	birth='Tue July 14 1992'
 	picture="https://randomuser.me/api/portraits/men/44.jpg"
 />
 
@@ -34,8 +34,8 @@ function App() {
 	lastName='Delores '
 	firstName='Obrien'
 	gender='female'
-	height={172}
-	 //birth={new Date("1988-05-11")}
+	height='172cm'
+	birth="Tue May 11 1993"
 	picture="https://randomuser.me/api/portraits/women/44.jpg"
 
 />

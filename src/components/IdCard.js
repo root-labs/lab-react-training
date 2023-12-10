@@ -12,6 +12,7 @@ function IdCard(props)
             <span><b>Gender</b>: {props.gender}</span>
             <span><b>Height</b>: {props.height}</span>
             <span><b>Birth</b>: {props.birth}</span>
+            
            </div>
         </div>
     )

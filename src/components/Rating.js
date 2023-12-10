@@ -15,7 +15,7 @@ function Rating(props)
         i++;
     }
     return <div>
-        <p style={{fontSize : '20px'}}>{s}</p>
+        <p style={{fontSize : '50px'}}>{s}</p>
     </div>
 }
 export default Rating

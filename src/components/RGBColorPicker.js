@@ -15,9 +15,9 @@ function RGBColorPicker()
 		padding:'15px 20px',
 		alignItems:'center',
 	}
-	const [rValue, setRValue]=React.useState(220)
+	const [rValue, setRValue]=React.useState(255) 
 	const [gValue, setGValue]=React.useState(150)
-	const [bValue, setBValue]=React.useState(20)
+	const [bValue, setBValue]=React.useState(0)
   return <div> 
   <div style={container}>
     <div style={{...bxStyle ,backgroundColor:'rgb('+rValue+',0,0)'}}></div>
