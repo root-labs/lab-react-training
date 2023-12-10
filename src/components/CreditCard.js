@@ -1,6 +1,6 @@
 import './CreditCard.css'
 import visa from '../assets/images/visa.png'
-import master from '../assets/images/mastercard.png'
+import master from '../assets/images/master-card.png'
 function CreditCard(props)
 {
     const img = props.type === 'Visa' ? visa : master;
