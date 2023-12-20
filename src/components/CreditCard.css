@@ -1,0 +1,13 @@
+.credit{
+    width:300px;
+    border-radius: 10px;
+    padding:18px;
+    margin:5px;
+    display: inline-block;
+}
+.credit > div{
+    text-align: right;
+}
+.credit img{
+    width:60px;
+}
