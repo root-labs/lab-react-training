@@ -1,38 +1,180 @@
-.App {
-  text-align: center;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-family: sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1{
+  margin: 30px 20px;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.idCard{
+  border: 2px solid  black;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  margin: 2rem 2rem;
+  height: 200px;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.idCard img {
+  height: 80%;
+
+}
+
+
+.idCard h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+
+}
+
+.idCard h3 > span{
+  font-weight: 400;
+  font-size: 1.2rem;
+  padding-left: 2px;
+}
+
+.greetings h4{
+  width: 95%;
+  border: 1px solid black;
+  padding: 10px 20px;
+  margin: 10px auto;
+}
+
+.BoxColor{
+  width: 90%;
+  height: 300px;
+  margin: 10px 20px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border: 2px solid;
+}
+
+.card__container{
+  display: flex;
+  height: 50vh;
+  gap: 20px;
+  margin: 0 30px;
+}
+
+.Card{
+  height: 350px;
+  width: 33.33%;
+  border-radius: 22px;
+  padding: 0 20px;
+}
+
+.Card h1{
+  text-align: right;
+}
+.Card h3 {
+  line-height: 4;
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 5px;
+}
+
+.Card p {
+  line-height: 2;
+}
+
+.rating {
+  font-size: 24px; /* Adjust the font size as needed */
+}
+
+.filled {
+  color: black; /* Adjust the color for filled stars */
+}
+
+.empty {
+  color: lightgray; /* Adjust the color for empty stars */
+}
+
+.driver{
+  background-color: blue;
+  margin: 2rem ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  gap: 30px;
+  border-radius: 30px;
+  line-height: 2
+  ;
+}
+
+.driver img {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  
+}
+
+.driver-details{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.like-buttons{
+  margin: 10px 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.like-buttons button{
+  padding: 10px 20px;
+  font-size: 1.4rem;
+  margin: 0 10px;
+}
+
+.clickable-picture{
+  width: 400px;
+  height: 500px;
+}
+.clickable-picture {
+  max-width: 100%;
+}
+
+.Carousel button {
+  padding: 10px 20px;
+  font-size: 2rem;
+  background-color: rgb(61, 139, 208);
+  border: none;
+  
+}
+
+.number_list{
+  width: 100%;
+
+}
+
+.number_list ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 50%;
+  flex-wrap: wrap;
+  gap: 40px;
+  border: 1px solid;
+  padding: 10px 20px;
+}
+
+.number_list ul li{
+  width: 200px;
+font-size: 5rem;
+list-style: none;
+text-align: center;
+}
+
+.even{
+  background: blue;
+}
+.odd{
+  background-color: aquamarine;
 }
