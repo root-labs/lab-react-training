@@ -10,8 +10,19 @@ import DriverCard from "./DriverCard";
 import LikeButton from "./LikeButton";
 import ClickablePicture from "./ClickablePicture";
 import Dice from "./Dice";
+import Carousel from "./Carousel";
+import NumbersTable from "./NumbersTable";
+import RGBColorPicker from "./RGBColorPicker";
+import SingleColorPicker from "./SingleColorPicker";
 
 function App() {
+  const images = [
+    "https://randomuser.me/api/portraits/women/1.jpg",
+    "https://randomuser.me/api/portraits/men/1.jpg",
+    "https://randomuser.me/api/portraits/women/2.jpg",
+    "https://randomuser.me/api/portraits/men/2.jpg",
+  ];
+  
   return (
     <div>
       <IdCard
@@ -85,7 +96,7 @@ function App() {
       <Rating>4</Rating>
 
       <Rating>5</Rating>
-      
+
       <DriverCard
         name="Travis Kalanick"
         rating={4.2}
@@ -110,8 +121,32 @@ function App() {
         img="./assets/images/maxence.png"
         imgClicked="./assets/images/maxence-glasses.png"
       />
-      <Dice/>
-      
+      <Dice />
+      <Carousel images={images} />
+      <NumbersTable limit={20} />
+      <SingleColorPicker
+        color="r"
+        value={rValue}
+        onChange={() => {
+          /* ... */
+        }}
+      />
+
+      <SingleColorPicker
+        color="g"
+        value={gValue}
+        onChange={() => {
+          /* ... */
+        }}
+      />
+
+      <SingleColorPicker
+        color="b"
+        value={bValue}
+        onChange={() => {
+          /* ... */
+        }}
+      />
     </div>
   );
 }
