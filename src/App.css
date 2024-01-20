@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+.ids {
+  margin: 10px;
+
+  border: double black 2px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.greetings {
+  margin: 10px;
+  margin-top: 80px;
+
+  border: double black 2px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.randoms {
+  margin: 10px;
+  margin-top: 80px;
+
+  border: double black 2px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.boxColors {
+  margin: 10px;
+  margin-top: 80px;
+
+  border: double black 2px;
+}
+
+.creditCards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+
+  margin: 10px;
+  margin-top: 80px;
+
+  border: double black 2px;
+}
+
+.ratings {
+  margin: 10px;
+  margin-top: 80px;
+
+  border: double black 2px;
+}
+
+.driverCards {
+  margin: 10px;
+  margin-top: 80px;
+
+  border: double black 2px;
+}
+
+.likeButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  margin: 10px;
+  margin-top: 80px;
+
+  border: double black 2px;
+}
+
+.clickablePictures {
+  margin: 10px;
+  margin-top: 80px;
+
+  border: double black 2px;
+}
+
+.dice {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  margin: 10px;
+  margin-top: 80px;
+
+  border: double black 2px;
+}
+
+.carousels {
+  margin: 10px;
+  margin-top: 80px;
+
+  border: double black 2px;
+}
+
+.numbersTables {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: stretch;
+
+  margin: 10px;
+  margin-top: 80px;
+
+  border: double black 2px;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.rgbColorPickers {
+  display: flex;
+  flex-flow: row wrap;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  margin: 10px;
+  margin-top: 80px;
+
+  border: double black 2px;
 }

@@ -1,0 +1,9 @@
+.randomBody {
+    margin: 10px;
+    border: solid black 2px;
+}
+
+.randomValue {
+    margin: 5px;
+    padding: 2px;
+}
