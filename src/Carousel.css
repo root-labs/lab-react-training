@@ -1,0 +1,28 @@
+/* Carousel.css */
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 600px; 
+    margin: auto; 
+  }
+  
+  .carousel button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .carousel img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    margin: 10px;
+  }
+  

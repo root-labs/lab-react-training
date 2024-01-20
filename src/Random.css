@@ -1,0 +1,19 @@
+/* Random.css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: 0;
+}
+
+.random{
+    border:1px solid #ccc;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+.random-text{
+    font-size: 22px;
+    font-weight:bold;
+    
+}

@@ -1,0 +1,25 @@
+/* NumbersTable.css */
+.numbers-table {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    gap: 8px;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  
+  .number-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+  }
+  
+  .even {
+    background-color: #e74c3c; /* Red background for even numbers */
+    color: #fff; /* White text color for even numbers */
+  }
+  

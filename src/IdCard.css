@@ -1,0 +1,30 @@
+/* IdCard.css */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: 0;
+
+}
+.nameTag {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .IdCard img {
+    max-width: 150px;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
