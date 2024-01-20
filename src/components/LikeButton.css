@@ -1,0 +1,11 @@
+.likeButton {
+    font-size: 24px;
+    color: white;
+    
+    /* background-color: #04AA6D; */
+
+    border: none;
+
+    margin: 10px;
+    padding: 10px;
+}

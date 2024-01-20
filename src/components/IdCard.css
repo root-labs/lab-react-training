@@ -1,0 +1,19 @@
+.idCard {
+    display: flex;
+    flex-flow: row nowrap;
+
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+
+    margin: 10px;
+}
+
+.infoArea {
+    margin: 5px;
+    margin-left: 10px;
+}
+
+.person-image {
+    margin: 5px;
+}

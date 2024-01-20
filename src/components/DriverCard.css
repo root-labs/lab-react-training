@@ -1,0 +1,50 @@
+.driverCard {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(57, 57, 149);
+
+    margin: 10px;
+
+    border-radius: 10px;
+}
+
+.driverImage {
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+
+    margin: 10px 5px;
+}
+
+.driverInfoContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    color: white;
+
+    margin-left: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.driverName {
+    margin-bottom: 0px;
+
+    font-size: 25px;
+}
+
+.rating {
+    margin: 0px;
+
+    font-size: 20px;
+}
+
+.car {
+    font-size: 15px;
+    font-weight: 80;
+}

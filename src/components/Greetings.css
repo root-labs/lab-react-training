@@ -1,0 +1,11 @@
+.greetingBody {
+    margin: 10px;
+
+    border: solid black 2px;
+}
+
+.greeting {
+    margin: 2px;
+    padding: 2px;
+    font-weight: bold
+}

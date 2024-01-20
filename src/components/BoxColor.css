@@ -1,0 +1,20 @@
+.colorBox {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    
+    margin: 10px;
+
+    height: 100px;
+
+    border: solid black 2px;
+}
+
+.content {
+    margin: 2px;
+    padding: 2px;
+
+    color: white;
+    text-align: center;
+}
