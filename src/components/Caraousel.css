@@ -1,0 +1,12 @@
+caraousel{
+    display:flex;
+    width:100%;
+    justify-content:center;
+    align-items:center;
+}
+.caraousel button{
+    padding:10px 15px;
+}
+.caraousel img{
+    margin:10px;
+}
