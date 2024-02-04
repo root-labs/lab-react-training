@@ -1,0 +1,18 @@
+.numbers-table {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+}
+  
+.even {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+  
+.odd {
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}

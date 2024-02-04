@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    padding: 0;
+}
+
+.id-card {
+    
+    align-items: center;
+    border: 3px solid black;
+    margin-bottom: 20px;
+}
+.image{
+    margin: 20px;
+}
+ul { 
+    padding-left: 150px;
+    margin-left: 20px ;
+    display: grid;
+    padding-top: 0px;
+}
+li { margin: 5px; }
+  

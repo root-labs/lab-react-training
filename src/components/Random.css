@@ -1,0 +1,7 @@
+.random {
+    display: grid;
+    border: 2px solid black;
+    border-radius: 6px;
+    margin-top: 20px;
+    font-weight: bold;
+}
