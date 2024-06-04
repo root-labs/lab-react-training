@@ -1,0 +1,13 @@
+.idcard{
+    padding: 5px;
+    display: flex;  
+    gap: 5px;
+    border: 2px solid black;
+
+}
+
+.text-right{
+    text-align: justify;
+}
+
+
