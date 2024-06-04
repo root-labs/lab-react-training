@@ -16,6 +16,7 @@ import imgClicked from "./assets/images/maxence-glasses.png";
 import Dice from './components/Dice';
 import Carousel from './components/Carousel/Carousel';
 import NumbersTable from './components/NumbersTable/NumbersTable';
+import RGBColorPicker from './components/RgbColorPicker';
 function App() {
   return (
     <div className="App">
@@ -137,7 +138,7 @@ images={[
 />
 
 <NumbersTable  limit={32}  />
-
+<RGBColorPicker/>
     </div>
   );
 }
