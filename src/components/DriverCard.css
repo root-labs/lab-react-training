@@ -1,0 +1,41 @@
+#dbox {
+  background-color: #455eb5;
+  color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  width: 50%;
+  margin: 10px auto;
+}
+
+#dbox img {
+  width: 145px;
+  height: auto;
+  position: relative;
+  right: 23px;
+}
+
+#dimg {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#dname {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+#drating {
+  font-size: 29px;
+}
+
+#dcar {
+  font-weight: 300;
+  font-size: 16px;
+}

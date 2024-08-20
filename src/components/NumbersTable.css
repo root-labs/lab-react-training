@@ -1,0 +1,27 @@
+#table {
+  font-size: 35px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+.white-box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+}
+
+.red-box {
+  background-color: #ff0000;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+}

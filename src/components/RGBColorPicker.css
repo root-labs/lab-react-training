@@ -1,0 +1,19 @@
+.rgb-box {
+  width: 50px;
+  height: 50px;
+  border: 3px solid black;
+}
+
+#color-picker {
+  font-weight: 500;
+  font-size: 16px;
+  margin: 20px;
+}
+
+.single-set {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+}
