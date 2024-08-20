@@ -1,0 +1,8 @@
+#rbox {
+  border: 3px solid black;
+  padding: 4px;
+  font-weight: 500;
+  font-size: 20px;
+  margin: 10px auto;
+  width: 50%;
+}

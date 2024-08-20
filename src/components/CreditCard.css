@@ -1,0 +1,26 @@
+#ccbox {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 10px;
+  gap: 8px;
+}
+
+#cnumber {
+  font-size: 30px;
+  align-self: center;
+}
+
+#ccbox img {
+  align-self: flex-end;
+}
+
+#cdetails {
+  font-size: 15px;
+}
+
+#cdetails span {
+  margin-left: 15px;
+}
