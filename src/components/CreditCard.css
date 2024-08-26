@@ -1,0 +1,44 @@
+.credit-card {
+    width: 300px;
+    height: 130px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.card-logo {
+    display: flex;
+    justify-content: flex-end;
+}
+  
+.card-logo img {
+    margin-top: -15px;
+    width: 50px;
+    height: auto;
+}
+  
+.card-number {
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin-top: -28px;
+}
+  
+.card-info {
+    font-size: 14px;
+    text-align: left;
+}
+  
+.bank {
+    margin-left: 30px;
+}
+  
+.owner {
+    display: flex;
+    margin-top: 20px;  /* Optional: Adjust the spacing above the owner text */
+    font-size: 14px;    
+}

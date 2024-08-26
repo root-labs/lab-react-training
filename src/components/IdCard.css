@@ -1,0 +1,24 @@
+.id-card {
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+    padding: 3px 7px;
+    margin: 10px 10px;
+}
+
+.id-card img {
+    margin-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.id-card-details {
+    margin-top: -30px; /* Apply the negative margin to the container */
+}
+
+.id-card-details p {
+    margin-left: -15px;
+    text-align: left;
+    line-height: 5px;
+    font-weight:500
+}
