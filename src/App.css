@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.credit-card-container {
+  display: flex;
+  justify-content: center; /* Center the cards horizontally */
+  gap: 20px; /* Optional: Add space between the cards */
+  margin-top: 20px; /* Optional: Add some space above the card container */
+}
+
+.driver-cards {
+  text-align: center;
+}
+
+.rgb-color-picker-container {
+  text-align: center;
+}

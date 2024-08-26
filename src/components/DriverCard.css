@@ -1,0 +1,40 @@
+.driver-card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Keeps items in their natural flow */
+    background-color: #455eb5;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 700px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-left: 400px;    
+  }
+  
+  .driver-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .driver-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centers the text within the info section */
+  }
+  
+  .driver-info h2 {
+    margin: 0;
+    font-size: 24px;
+    text-align: left;
+  }
+  
+  .driver-info p {
+    margin: -5px 0 0;
+    font-size: 16px;
+    text-align: left;
+  }

@@ -1,0 +1,25 @@
+.numbers-table {
+  display: grid;
+  grid-template-columns: repeat(5, 52px); /* 5 columns */
+  grid-template-rows: repeat(3, 52px); /* 3 rows */
+  gap: 0px; /* Space between numbers */
+}
+
+.number {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.even {
+  background-color: red;
+}
+
+.odd {
+  color: black;
+}

@@ -1,0 +1,20 @@
+.box-color {
+    width: 80%; /* Adjust width as needed */
+    height: 150px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Stack text vertically */
+    justify-content: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    border: 2px solid black; /* Optional: border to define the box */
+    margin-bottom: 20px;
+    margin-left: 10px;
+  }
+  
+  .box-color p {
+    margin: 0;
+    font-size: 30px;
+    /* Optional: adjust spacing between lines */
+    line-height: 1.5;
+  }
