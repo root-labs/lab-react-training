@@ -1,0 +1,23 @@
+.carousel{
+    display:flex;
+    flex-direction:column;
+    padding: 3rem;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.carousel>img{
+    width: 15rem;
+    height: auto;
+}
+
+.buttons-carousel>button{
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.075);
+  margin: 5px;
+  color: rgba(0, 0, 0, 0.564);
+  cursor: pointer;
+
+}
