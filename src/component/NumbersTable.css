@@ -1,0 +1,28 @@
+
+.numbers-table {
+    margin-top: 21px;
+    justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(5, 52px);
+  grid-template-rows: repeat(3, 52px);
+  gap: 0px;
+}
+
+.number {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.even {
+  background-color: red;
+}
+
+.odd {
+  color: black;
+}

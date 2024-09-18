@@ -1,0 +1,27 @@
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .carousel-image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    margin: 0 10px;
+  }
+  
+  .carousel-button {
+    background-color: rgb(5, 172, 172);
+    border-radius: 11px;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .carousel-button:hover {
+    background-color: rgb(2, 95, 95);
+  }
+  
